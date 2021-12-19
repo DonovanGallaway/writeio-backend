@@ -4,8 +4,8 @@
 
 require('dotenv').config()
 const express = require('express')
-const morgan = require('morgtan')
-const mongoose = require('../db/db')
+const morgan = require('morgan')
+const mongoose = require('./db/db')
 const cors = require('cors')
 const app = express()
 const AuthRouter = require('./controllers/user')

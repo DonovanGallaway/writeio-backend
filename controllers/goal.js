@@ -1,5 +1,4 @@
 const Goal = require('../models/goal')
-const User = require('../models/user')
 
 const {Router} = require('express')
 const router = Router()
@@ -35,3 +34,5 @@ router.delete('/:id', async (req,res) => {
         res.status(400).json({error})
     }
 })
+
+module.exports = router
