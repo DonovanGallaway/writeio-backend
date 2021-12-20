@@ -34,6 +34,6 @@ app.get('/', auth, (req,res) => {
 })
 
 app.use('/auth', AuthRouter)
-app.use('/tweet', GoalRouter)
+app.use('/goal', GoalRouter)
 
 app.listen(PORT, () => {console.log(`listening on port ${PORT}`)})
