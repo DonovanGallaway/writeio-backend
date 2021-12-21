@@ -19,6 +19,14 @@ router.post('/', async (req,res) => {
     }
 })
 
+router.get('/:id', async (req,res) => {
+    try {
+        res.status(200).json(await Goal.findById(id))
+    } catch (error) {
+        res.status(400).json({error})
+    }
+})
+
 router.put('/:id', async (req,res) => {
     try {
         res.status(200).json(await Goal.findByIdAndUpdate(req.params.id, req.body, {new:true}))
