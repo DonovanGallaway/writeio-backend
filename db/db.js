@@ -8,4 +8,4 @@ mongoose.connect(DATABASE_URL, config)
 mongoose.connection
 .on('open', () => console.log('connected to Mongo'))
 .on('close', () => console.log('disconnected from Mongo'))
-.on('error', () => console.log(error))
+.on('error', (error) => console.log(error))
